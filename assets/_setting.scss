@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Corben";
+  src: url(./fonts/Corben-Regular.ttf);
+}
+@font-face {
+  font-family: "Futura";
+  src: url(./fonts/FuturaRenner-Regular.otf);
+}
+@font-face {
+  font-family: "Museo";
+  src: url(./fonts/MuseoModerno-VariableFont_wght.ttf);
+}
+
+$font1: Corben, "montserrat";
+$font2: Futura, open;
+$Font3: Museo, serif;
+$black1: rgb(0, 0, 0);
+$bleu1: rgb(0, 46, 93);
+$bleu2: rgb(18, 169, 232);
+$bleu3: rgb(35, 102, 205);
+$bleu4: rgb(118, 178, 238);
+$grey1: rgb(128, 128, 128);
+$white1: rgb(250, 250, 250);
+$violet1: rgb(170, 115, 211);
+
+@mixin chilCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin alignChildren($space) {
+  display: flex;
+  align-items: center;
+  justify-content: $space;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  text-align: center;
+  font-family: $font2;
+  background: $grey1;
+}

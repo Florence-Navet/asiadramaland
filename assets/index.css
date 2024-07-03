@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Corben";
+  src: url(./fonts/Corben-Regular.ttf);
+}
+@font-face {
+  font-family: "Futura";
+  src: url(./fonts/FuturaRenner-Regular.otf);
+}
+@font-face {
+  font-family: "Museo";
+  src: url(./fonts/MuseoModerno-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  text-align: center;
+  font-family: Futura, open;
+  background: rgb(128, 128, 128);
+}
+
+header {
+  background: url(./img/header.png) center/cover;
+  padding: 0 50px;
+  color: rgb(250, 250, 250);
+}
+header nav {
+  height: 12vh;
+  display: grid;
+}
+header nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  background: rgb(128, 128, 128);
+  height: 40px;
+  width: auto;
+  margin: 0 auto;
+}
+header nav ul li {
+  font-size: 15px;
+  line-height: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin: 8px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav ul li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+header .header-text {
+  height: 88vh;
+}/*# sourceMappingURL=index.css.map */
