@@ -2,6 +2,8 @@ header {
   background: url(./img/header.png) center/cover;
   padding: 0 50px;
   color: $white1;
+  min-height: 100vh;
+  position: relative;
 
   nav {
     height: 12vh;
