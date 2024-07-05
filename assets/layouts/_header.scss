@@ -1,22 +1,35 @@
 header {
-  background: url(./img/header.png) center/cover;
+  background: url(./img/slider.png) center/cover;
   padding: 0 50px;
   color: $white1;
   min-height: 100vh;
   position: relative;
 
   nav {
-    height: 12vh;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-left: 55%;
+
+    color: $black1;
+    width: 85%;
+    height: 62px;
+    z-index: 100;
+
+    position: absolute;
+    transform: translateX(-50%);
     ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      background: $grey1;
-      height: 40px;
-      width: auto;
-      margin: 0 auto;
+      display: flex;
+      align-items: center;
       li {
+        margin: auto 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-size: 15px;
+        text-transform: uppercase;
+        padding: 0 15px;
         line-height: 10px;
         color: $black1;
         font-weight: 700;
@@ -24,6 +37,9 @@ header {
         transition: 0.2s;
         margin: 8px 20px;
         align-items: center;
+        height: 50%;
+        background: rgb(194, 192, 192);
+        margin-top: 50%;
 
         &:hover {
           transform: scale(1.3);
