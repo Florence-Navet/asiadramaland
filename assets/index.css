@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Corben";
   src: url(./fonts/Corben-Regular.ttf);
@@ -30,7 +29,7 @@ body {
 }
 
 header {
-  background: url(./img/slider.png) center/cover;
+  background: url(./img/sliderV2.png) center/cover;
   padding: 0 50px;
   color: rgb(250, 250, 250);
   min-height: 100vh;
@@ -97,13 +96,22 @@ header .header-text {
 }
 
 .section1 {
-  padding: 100px 15px 65px;
-  min-height: 500px;
+  padding: 0 15px 65px;
+  min-height: 100vh;
   background: -webkit-gradient(linear, left top, right top, from(blue), to(pink));
   background: linear-gradient(to right, blue, pink);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .section1 .section1-up {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +125,8 @@ header .header-text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 50vh;
+  padding-top: 150px;
+  height: auto;
 }
 .section1 .section1-up .new-member {
   display: -webkit-box;
@@ -135,23 +144,23 @@ header .header-text {
           flex-direction: column;
   border: 4px solid rgb(0, 46, 93);
   margin: 0 auto;
-  padding: 300px auto;
-  width: 50%;
-  max-width: 50%;
+  padding: 20px 20px;
+  width: auto;
+  max-width: 100%;
   background: rgb(128, 128, 128);
 }
 .section1 .section1-up .new-member h3 {
   font-family: Museo, serif;
   font-weight: 400;
-  font-style: 40px;
-  line-height: 56px;
+  font-size: 30px;
+  line-height: 46px;
   color: rgb(0, 46, 93);
 }
 .section1 .section1-up .new-member p {
   font-family: Futura, open;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 16px;
   color: rgb(250, 250, 250);
 }
 .section1 .section1-up .new-member .nm-btn {
@@ -162,7 +171,8 @@ header .header-text {
   font-weight: 400;
   color: rgb(250, 250, 250);
   font-size: 20px;
-  line-height: 20px;
+  line-height: 18px;
+  letter-spacing: 4px;
   background: rgb(0, 46, 93);
   cursor: pointer;
   padding: 15px 40px;
@@ -222,17 +232,17 @@ header .header-text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 3px dashed #ffffff; /* Remplacez $white1 par la couleur appropriée */
+  border-bottom: 3px dashed #ffffff;
   padding: 20px 0;
   width: 25%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute; /* Permet de centrer l'élément */
+  position: absolute;
   top: 110%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* Centre parfaitement l'élément */
+          transform: translate(-50%, -50%);
 }
 .section1 .section1-up #nouveaute {
   text-transform: uppercase;
@@ -243,12 +253,22 @@ header .header-text {
   border: 4px groove rgb(0, 46, 93);
 }
 .section1 .section1-down {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-items: center;
-  margin: 0 auto;
-  height: 50vh;
-  padding-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  width: 100%;
+}
+.section1 .section1-down iframe {
+  margin: 20px;
+  width: 48%;
+  height: 26.9957924264%;
 }
 .section1 .section1-down .btn-video {
   display: -webkit-box;
@@ -260,11 +280,10 @@ header .header-text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgb(250, 250, 250);
+  margin-top: 20px;
 }
 .section1 .btn3 {
-  margin-top: 50px;
-  background: rgb(135, 130, 130);
+  background: rgb(250, 250, 250);
   color: rgb(0, 46, 93);
   border: 1px solid rgb(0, 46, 93);
   padding: 30px auto;
@@ -284,37 +303,17 @@ header .header-text {
   background: rgb(128, 128, 128);
   color: rgb(0, 46, 93);
 }
-.section1 .btn3 .section-video-container1 {
+.section1 .section-video-container1,
+.section1 .section-video-container2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
-  max-width: 50%;
-}
-.section1 .btn3 .section-video-container2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 70%;
-  max-width: 50%;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

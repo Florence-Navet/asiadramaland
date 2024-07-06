@@ -1,39 +1,42 @@
 .section1 {
-  padding: 100px 15px 65px;
-  min-height: 500px;
+  padding: 0 15px 65px; // Enlevez le padding-top ici
+  min-height: 100vh; // S'assure que la section prend toute la hauteur de la vue
   background: linear-gradient(to right, blue, pink);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .section1-up {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    padding-top: 150px; // Ajoutez un padding-top pour compenser la hauteur du header
+    height: auto;
 
     .new-member {
       @include chilCenter;
       flex-direction: column;
       border: 4px solid $bleu1;
       margin: 0 auto;
-      padding: 300px auto;
-      width: 50%;
-      max-width: 50%;
+      padding: 20px 20px; // Ajustez le padding pour centrer le contenu
+      width: auto;
+      max-width: 100%;
       background: $grey1;
 
       h3 {
         font-family: $font3;
         font-weight: 400;
-        font-style: 40px;
-        line-height: 56px;
+        font-size: 30px;
+        line-height: 46px;
         color: $bleu1;
       }
 
       p {
         font-family: $font2;
         font-weight: 700;
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 16px;
+        line-height: 16px;
         color: $white1;
       }
 
@@ -45,7 +48,8 @@
           font-weight: 400;
           color: $white1;
           font-size: 20px;
-          line-height: 20px;
+          line-height: 18px;
+          letter-spacing: 4px;
           background: $bleu1;
           cursor: pointer;
           padding: 15px 40px;
@@ -94,14 +98,14 @@
     .separateur {
       display: flex;
       justify-content: space-between;
-      border-bottom: 3px dashed #ffffff; /* Remplacez $white1 par la couleur appropriée */
+      border-bottom: 3px dashed #ffffff; // Remplacez $white1 par la couleur appropriée
       padding: 20px 0;
       width: 25%;
       align-items: center;
-      position: absolute; /* Permet de centrer l'élément */
+      position: absolute; // Permet de centrer l'élément
       top: 110%;
       left: 50%;
-      transform: translate(-50%, -50%); /* Centre parfaitement l'élément */
+      transform: translate(-50%, -50%); // Centre parfaitement l'élément
     }
     #nouveaute {
       text-transform: uppercase;
@@ -114,21 +118,26 @@
   }
 
   .section1-down {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-items: center;
-    margin: 0 auto;
-    height: 50vh;
-    padding-top: 200px;
+    display: flex; // Changez la disposition en flex
+    justify-content: space-between; // Espace entre les vidéos
+    align-items: center;
+    padding-top: 50px; // Ajoutez du padding-top pour espacer correctement les sections
+    width: 100%; // Assurez-vous que la section prenne toute la largeur
+
+    iframe {
+      margin: 20px;
+      width: 48%; // Ajustez la largeur des iframes pour les agrandir
+      height: calc(48% * 401 / 713); // Maintenir le rapport d'aspect
+    }
 
     .btn-video {
       @include chilCenter;
-      background: $white1;
+      margin-top: 20px;
     }
   }
+
   .btn3 {
-    margin-top: 50px;
-    background: rgb(135, 130, 130);
+    background: $white1;
     color: $bleu1;
     border: 1px solid $bleu1;
     padding: 30px auto;
@@ -146,19 +155,13 @@
       background: $grey1;
       color: $bleu1;
     }
+  }
 
-    .section-video-container1 {
-      @include chilCenter;
-      flex-direction: column;
-      width: 70%;
-      max-width: 50%;
-    }
-
-    .section-video-container2 {
-      @include chilCenter;
-      flex-direction: column;
-      width: 70%;
-      max-width: 50%;
-    }
+  .section-video-container1,
+  .section-video-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; // Ajustez la largeur des conteneurs vidéo
   }
 }
