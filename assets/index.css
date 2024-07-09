@@ -37,9 +37,11 @@ header nav {
   position: fixed;
   width: 100%;
   height: 50px;
-  top: -50px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  top: -60px;
+  -webkit-transition: top 0.3s ease;
+  transition: top 0.3s ease;
+  width: 100%;
+  z-index: 1000;
 }
 header nav ul {
   display: -webkit-box;
@@ -57,6 +59,7 @@ header nav ul li {
   margin: auto 0;
   background: rgb(194, 192, 192);
   text-align: center;
+  border: 2px solid rgb(0, 46, 93);
   font-size: 15px;
   text-transform: uppercase;
   padding: 10px 15px;
@@ -153,7 +156,7 @@ header .header-text {
   padding: 20px 20px;
   width: auto;
   max-width: 100%;
-  background: rgb(128, 128, 128);
+  background: rgb(194, 192, 192);
 }
 .section1 .section1-up .new-member h3 {
   font-family: Museo, serif;
@@ -187,7 +190,7 @@ header .header-text {
   width: 100%;
   line-height: 24px;
   font-size: 17px;
-  color: rgb(128, 128, 128);
+  color: rgb(194, 192, 192);
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: 0.5s;
@@ -327,18 +330,16 @@ header .header-text {
 .section2 {
   padding: 80px;
   position: relative;
-  background: rgb(35, 102, 205);
-  z-index: 1;
 }
 .section2 button {
   cursor: pointer;
+  font-family: Museo, serif;
 }
 .section2 button:hover {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 250);
-  border: 4px solid rgb(0, 0, 0);
+  background: rgb(250, 250, 250);
+  color: rgb(35, 102, 205);
+  background: pink;
+  border: 4px solid rgb(35, 102, 205);
 }
 .section2 img {
   width: 100px;
@@ -353,7 +354,6 @@ header .header-text {
   text-align: center;
   max-width: 1100px;
   margin: 0 auto;
-  z-index: 100;
   position: relative;
   height: 88vh;
 }
@@ -365,14 +365,14 @@ header .header-text {
   border: 2px solid rgb(128, 128, 128);
   margin: 0 20px;
   padding: 50px 20px;
-  background: rgb(250, 250, 250);
+  background: -webkit-gradient(linear, left top, right top, from(blue), to(pink));
+  background: linear-gradient(to right, blue, pink);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .section2 .groupe .groupe-public .container-btn,
 .section2 .groupe .groupe-VIP .container-btn {
-  font-family: Futura, open;
   color: rgb(128, 128, 128);
   background: transparent;
   line-height: 16px;
@@ -398,9 +398,10 @@ header .header-text {
 .section2 .groupe .groupe-VIP .container-btn:hover {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 250);
-  border: 4px solid rgb(0, 0, 0);
+  background: rgb(250, 250, 250);
+  color: rgb(35, 102, 205);
+  background: pink;
+  border: 4px solid rgb(35, 102, 205);
 }
 .section2 .groupe .groupe-public h3,
 .section2 .groupe .groupe-VIP h3 {
@@ -408,11 +409,11 @@ header .header-text {
   font-weight: 400;
   font-size: 28px;
   line-height: 39px;
-  color: rgb(0, 0, 0);
+  color: rgb(250, 250, 250);
 }
 .section2 .groupe .groupe-public p,
 .section2 .groupe .groupe-VIP p {
-  color: rgb(0, 0, 0);
+  color: rgb(250, 250, 250);
   font-family: Corben, "montserrat";
   line-height: 20px;
   font-size: 14px;
@@ -427,12 +428,12 @@ header .header-text {
 .section2 .container-btn #btn-projet {
   padding: 10px 20px;
   background: rgb(128, 128, 128);
-  color: rgb(128, 128, 128);
+  color: rgb(250, 250, 250);
   border: none;
-  font-size: 34px;
-  line-height: 24px;
-  background: rgb(170, 115, 211);
-  border: 5px dashed rgb(128, 128, 128);
+  font-size: 20px;
+  line-height: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(blue), to(pink));
+  background: linear-gradient(to right, blue, pink);
   margin: 4px 2px;
   border-radius: 2rem;
   text-decoration: none;
@@ -444,9 +445,10 @@ header .header-text {
 .section2 .container-btn #btn-projet:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background: rgb(128, 128, 128);
-  color: rgb(170, 115, 211);
-  border: 4px solid rgb(128, 128, 128);
+  background: rgb(250, 250, 250);
+  color: rgb(35, 102, 205);
+  background: pink;
+  border: 4px solid rgb(35, 102, 205);
 }
 .section2 .section2-container-projet {
   display: grid;
