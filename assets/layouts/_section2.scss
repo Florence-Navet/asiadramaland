@@ -1,6 +1,7 @@
 .section2 {
-  padding: 80px;
+  padding: 10px 10px 10px 10px;
   position: relative;
+  min-height: 100vh;
 
   button {
     cursor: pointer;
@@ -27,17 +28,23 @@
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
-    height: 88vh;
+    height: 50vh;
     .btn-groupe {
       padding: 10px 20px;
+    }
+    .groupe-VIP {
+      background: linear-gradient(to right, pink, blue);
+    }
+    .groupe-public {
+      background: linear-gradient(to right, blue, pink);
     }
 
     .groupe-public,
     .groupe-VIP {
       border: 2px solid $grey1;
       margin: 0 20px;
-      padding: 50px 20px;
-      background: linear-gradient(to right, blue, pink);
+      padding: 10px 10px;
+
       align-items: center;
 
       .container-btn {
@@ -102,6 +109,7 @@
       text-transform: uppercase;
       font-family: $font2;
       transition: 0.3s;
+      margin-top: 60px;
       &:hover {
         transform: scale(1.1);
         background: $white1;
@@ -116,6 +124,7 @@
     grid-template-columns: 50% 50%;
     min-height: 50vh;
     border: 2px solid $black1;
+    margin-bottom: 20px;
 
     .container-left {
       display: grid;
