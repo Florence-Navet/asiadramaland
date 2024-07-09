@@ -615,4 +615,5 @@ header .header-text {
   color: pink;
   border: 4px solid rgb(35, 102, 205);
   font-weight: 900;
+  text-shadow: 20px -14px 18px #bf5bd4, 1px -1px 0 rgba(201, 17, 207, 0.5803921569), -1px 1px 14px rgba(105, 21, 108, 0.8392156863), 13px -7px 7px rgba(182, 125, 196, 0.5882352941);
 }/*# sourceMappingURL=index.css.map */
