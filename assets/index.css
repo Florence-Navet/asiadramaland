@@ -490,4 +490,50 @@ header .header-text {
 }
 .section2 .section2-container-projet .container-right {
   background: url(./img/reset.jpg) center/cover;
+}
+
+.section3 {
+  background: -webkit-gradient(linear, left top, right top, from(blue), to(pink));
+  background: linear-gradient(to right, blue, pink);
+  color: rgb(250, 250, 250);
+  height: 500px;
+  max-height: 600px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.section3 .sec3-btn {
+  padding: 300px 20px 65px;
+}
+.section3 button {
+  color: rgb(35, 102, 205);
+  background: pink;
+  line-height: 16px;
+  font-weight: 16px;
+  font-size: 16px;
+  border: 4px solid rgb(35, 102, 205);
+  width: 50%;
+  margin: 15px auto;
+  border-radius: 60px/40px;
+  padding: 20px 20px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.section3 button:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  background: transparent;
+  color: rgb(128, 128, 128);
+  border: 2px solid rgb(0, 0, 0);
+}
+.section3 .section3-container-public {
+  background: url(./img/sec3pub.png) center/cover;
+  width: 100%;
+  height: 100%;
+}
+.section3 .section3-container-vip {
+  background: url(./img/sec3vip.png) center/cover;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=index.css.map */
