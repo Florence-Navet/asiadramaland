@@ -1,26 +1,9 @@
 .section1 {
-  padding: 0 15px 65px;
   min-height: 100vh; // S'assure que la section prend toute la hauteur de la vue
   background: linear-gradient(to right, blue, pink);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  .nav {
-    position: fixed;
-    top: -50px;
-    width: 100%;
-    background: $white1;
-    color: $black1;
-    transition: 0.4s;
-    z-index: 1000;
-
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
 
   .section1-up {
     display: flex;

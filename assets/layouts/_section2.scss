@@ -1,5 +1,4 @@
 .section2 {
-  padding: 10px 10px 10px 10px;
   position: relative;
   min-height: 100vh;
 
@@ -44,7 +43,6 @@
       border: 2px solid $grey1;
       margin: 0 20px;
       padding: 10px 10px;
-
       align-items: center;
 
       .container-btn {
@@ -53,9 +51,9 @@
         line-height: 16px;
         font-weight: 16px;
         font-size: 16px;
-        border: 2px solid $black1;
+        order: 4px solid $bleu3;
         width: 60%;
-        margin: 15px auto;
+        margin: 20px auto;
         border-radius: 60px /40px;
         padding: 20px 20px;
         margin-top: 5px;
@@ -124,7 +122,8 @@
     grid-template-columns: 50% 50%;
     min-height: 50vh;
     border: 2px solid $black1;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin: 40px 110px;
 
     .container-left {
       display: grid;
@@ -135,16 +134,21 @@
         "c d";
       gap: 20px;
 
+      #new {
+        font-family: $font2;
+        font-size: 1.5rem;
+      }
+
       .label-1 {
         grid-area: a;
-        padding: 25px 25px;
+        padding: 25px 0;
         margin: 0 auto;
         display: flex;
         display: inline-block;
       }
       .select-1 {
         grid-area: b;
-        padding: 25px 25px;
+        padding: 10px 10px;
         margin: 0 auto;
       }
       .label-2 {

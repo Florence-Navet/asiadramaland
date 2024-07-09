@@ -84,7 +84,6 @@ header .header-text {
 }
 
 .section1 {
-  padding: 0 15px 65px;
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, right top, from(blue), to(pink));
   background: linear-gradient(to right, blue, pink);
@@ -98,27 +97,6 @@ header .header-text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.section1 .nav {
-  position: fixed;
-  top: -50px;
-  width: 100%;
-  background: rgb(250, 250, 250);
-  color: rgb(0, 0, 0);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  z-index: 1000;
-}
-.section1 .nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .section1 .section1-up {
   display: -webkit-box;
@@ -328,7 +306,6 @@ header .header-text {
 }
 
 .section2 {
-  padding: 10px 10px 10px 10px;
   position: relative;
   min-height: 100vh;
 }
@@ -385,9 +362,11 @@ header .header-text {
   line-height: 16px;
   font-weight: 16px;
   font-size: 16px;
-  border: 2px solid rgb(0, 0, 0);
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4px solid rgb(35, 102, 205);
+          order: 4px solid rgb(35, 102, 205);
   width: 60%;
-  margin: 15px auto;
+  margin: 20px auto;
   border-radius: 60px/40px;
   padding: 20px 20px;
   margin-top: 5px;
@@ -463,7 +442,8 @@ header .header-text {
   grid-template-columns: 50% 50%;
   min-height: 50vh;
   border: 2px solid rgb(0, 0, 0);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin: 40px 110px;
 }
 .section2 .section2-container-projet .container-left {
   display: grid;
@@ -472,9 +452,13 @@ header .header-text {
   grid-template-areas: "a b" "c d";
   gap: 20px;
 }
+.section2 .section2-container-projet .container-left #new {
+  font-family: Futura, open;
+  font-size: 1.5rem;
+}
 .section2 .section2-container-projet .container-left .label-1 {
   grid-area: a;
-  padding: 25px 25px;
+  padding: 25px 0;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -483,7 +467,7 @@ header .header-text {
 }
 .section2 .section2-container-projet .container-left .select-1 {
   grid-area: b;
-  padding: 25px 25px;
+  padding: 10px 10px;
   margin: 0 auto;
 }
 .section2 .section2-container-projet .container-left .label-2 {
@@ -539,6 +523,7 @@ header .header-text {
   font-weight: 900;
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
+  text-shadow: 10px -4px 13px #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .section3 .section3-container-public {
   background: url(./img/sec3pub.png) center/cover;
