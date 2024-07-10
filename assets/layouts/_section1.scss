@@ -14,7 +14,7 @@
     height: auto;
 
     .new-member {
-      @include chilCenter;
+      @include childCenter;
       flex-direction: column;
       border: 4px solid $bleu1;
       margin: 0 auto;
@@ -34,7 +34,7 @@
       p {
         font-family: $font2;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 16px;
         color: $white1;
       }
@@ -43,6 +43,7 @@
         padding: 20px;
 
         .btn1 {
+          text-transform: uppercase;
           font-family: $font2;
           font-weight: 400;
           color: $white1;
@@ -72,14 +73,15 @@
     }
 
     .btn-connect {
-      @include chilCenter;
+      @include childCenter;
       padding: 90px;
 
       .btn2 {
         border: 4px solid $bleu1;
         background: $white1;
-        border-radius: 90px / 50px;
+        border-radius: 190px / 60px;
         padding: 40px 50px;
+        font-size: 25px;
         cursor: pointer;
         font-family: $font1;
         color: $bleu1;
@@ -117,50 +119,78 @@
   }
 
   .section1-down {
-    display: flex; // Changez la disposition en flex
-    justify-content: space-between; // Espace entre les vidéos
-    align-items: center;
-    padding-top: 50px; // Ajoutez du padding-top pour espacer correctement les sections
-    width: 100%; // Assurez-vous que la section prenne toute la largeur
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    iframe {
-      margin: 20px;
-      width: 48%; // Ajustez la largeur des iframes pour les agrandir
-      height: calc(48% * 401 / 713); // Maintenir le rapport d'aspect
+    .section-video-container1 {
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+
+      .btn-video {
+        @include childCenter;
+        margin-bottom: 20px;
+      }
+
+      .btn3 {
+        border: 4px solid $bleu1;
+        padding: 50px auto;
+        margin: 0 auto;
+        width: 150px;
+        cursor: pointer;
+        transition: 0.2s;
+        font-family: $font2;
+        font-weight: 400;
+        font-size: 20px;
+        transition: 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      iframe {
+        border: 5px solid $grey1;
+      }
     }
+    .section-video-container2 {
+      margin-bottom: 74px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
 
-    .btn-video {
-      @include chilCenter;
-      margin-top: 20px;
+      .btn-video {
+        @include childCenter;
+        margin-bottom: 20px;
+      }
+
+      .btn3 {
+        border: 4px solid $bleu1;
+        padding: 50px auto;
+        margin: 0 auto;
+        width: 120px;
+        cursor: pointer;
+        transition: 0.2s;
+        font-family: $font2;
+        font-weight: 400;
+        font-size: 20px;
+        transition: 0.2s;
+      }
+
+      iframe {
+        border: 5px solid $grey1;
+      }
+      a {
+        text-decoration: none;
+        z-index: 1000;
+      }
     }
-  }
-
-  .btn3 {
-    background: $white1;
-    color: $bleu1;
-    border: 1px solid $bleu1;
-    padding: 30px auto;
-    margin: 0 auto;
-    width: 120px;
-    cursor: pointer;
-    transition: 0.2s;
-    font-family: $font2;
-    font-weight: 400;
-    font-size: 15px;
-    transition: 0.2s;
-
-    &:hover {
-      transform: scale(1.1);
-      background: $grey1;
-      color: $bleu1;
-    }
-  }
-
-  .section-video-container1,
-  .section-video-container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; // Ajustez la largeur des conteneurs vidéo
   }
 }

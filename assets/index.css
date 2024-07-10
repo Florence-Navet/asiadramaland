@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Corben";
   src: url(./fonts/Corben-Regular.ttf);
@@ -10,6 +11,22 @@
   font-family: "Museo";
   src: url(./fonts/MuseoModerno-VariableFont_wght.ttf);
 }
+/* Style pour les liens non visités */
+a:link {
+  color: rgb(0, 0, 0);
+}
+
+/* Style pour les liens visités */
+a:visited {
+  color: rgb(0, 46, 93);
+  background: rgb(0, 46, 93);
+}
+
+/* Enlever le soulignement pour tous les liens */
+a {
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -60,7 +77,7 @@ header nav ul li {
   background: rgb(194, 192, 192);
   text-align: center;
   border: 2px solid rgb(0, 46, 93);
-  font-size: 15px;
+  font-size: 20px;
   text-transform: uppercase;
   padding: 10px 15px;
   line-height: 10px;
@@ -69,7 +86,7 @@ header nav ul li {
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  margin: 8px 20px;
+  margin: 8px 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -146,7 +163,7 @@ header .header-text {
 .section1 .section1-up .new-member p {
   font-family: Futura, open;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 16px;
   color: rgb(250, 250, 250);
 }
@@ -154,6 +171,7 @@ header .header-text {
   padding: 20px;
 }
 .section1 .section1-up .new-member .nm-btn .btn1 {
+  text-transform: uppercase;
   font-family: Futura, open;
   font-weight: 400;
   color: rgb(250, 250, 250);
@@ -197,8 +215,9 @@ header .header-text {
 .section1 .section1-up .btn-connect .btn2 {
   border: 4px solid rgb(0, 46, 93);
   background: rgb(250, 250, 250);
-  border-radius: 90px/50px;
+  border-radius: 190px/60px;
   padding: 40px 50px;
+  font-size: 25px;
   cursor: pointer;
   font-family: Corben, "montserrat";
   color: rgb(0, 46, 93);
@@ -240,24 +259,11 @@ header .header-text {
   border: 4px groove rgb(0, 46, 93);
 }
 .section1 .section1-down {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 50px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.section1 .section1-down iframe {
-  margin: 20px;
-  width: 48%;
-  height: 26.9957924264%;
-}
-.section1 .section1-down .btn-video {
+.section1 .section1-down .section-video-container1 {
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,13 +273,78 @@ header .header-text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
 }
-.section1 .btn3 {
-  background: rgb(250, 250, 250);
-  color: rgb(0, 46, 93);
-  border: 1px solid rgb(0, 46, 93);
-  padding: 30px auto;
+.section1 .section1-down .section-video-container1 .btn-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.section1 .section1-down .section-video-container1 .btn3 {
+  border: 4px solid rgb(0, 46, 93);
+  padding: 50px auto;
+  margin: 0 auto;
+  width: 150px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-family: Futura, open;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.2s;
+}
+.section1 .section1-down .section-video-container1 .btn3:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.section1 .section1-down .section-video-container1 iframe {
+  border: 5px solid rgb(128, 128, 128);
+}
+.section1 .section1-down .section-video-container2 {
+  margin-bottom: 74px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.section1 .section1-down .section-video-container2 .btn-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.section1 .section1-down .section-video-container2 .btn3 {
+  border: 4px solid rgb(0, 46, 93);
+  padding: 50px auto;
   margin: 0 auto;
   width: 120px;
   cursor: pointer;
@@ -281,28 +352,15 @@ header .header-text {
   transition: 0.2s;
   font-family: Futura, open;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
   transition: 0.2s;
 }
-.section1 .btn3:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  background: rgb(128, 128, 128);
-  color: rgb(0, 46, 93);
+.section1 .section1-down .section-video-container2 iframe {
+  border: 5px solid rgb(128, 128, 128);
 }
-.section1 .section-video-container1,
-.section1 .section-video-container2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+.section1 .section1-down .section-video-container2 a {
+  text-decoration: none;
+  z-index: 1000;
 }
 
 .section2 {
@@ -312,6 +370,7 @@ header .header-text {
 .section2 button {
   cursor: pointer;
   font-family: Museo, serif;
+  text-transform: uppercase;
 }
 .section2 button:hover {
   background: rgb(250, 250, 250);
@@ -589,12 +648,15 @@ header .header-text {
 .section4 .section4-down h2 {
   font-family: Futura, open;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 .section4 .section4-down h4 {
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 .section4 .section4-down h2 {
   font-size: 1.8rem;
+  text-transform: uppercase;
 }
 .section4 .section4-down .sec4-btn button {
   padding: 10px 20px;
@@ -608,6 +670,7 @@ header .header-text {
   padding: 20px 20px;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
 .section4 .section4-down .sec4-btn button:hover {
   -webkit-transform: scale(0.8);
@@ -701,6 +764,7 @@ footer .container-footer .footer-right form label {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-bottom: 5px;
+  text-transform: uppercase;
 }
 footer .container-footer .footer-right form input[type=text],
 footer .container-footer .footer-right form textarea {
