@@ -129,7 +129,7 @@ header .header-text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 150px;
+  padding-top: 50px;
   height: auto;
 }
 .section1 .section1-up .new-member {
@@ -210,7 +210,7 @@ header .header-text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 90px;
+  padding: 60px 40px 40px 40px;
 }
 .section1 .section1-up .btn-connect .btn2 {
   border: 4px solid rgb(0, 46, 93);
@@ -258,6 +258,10 @@ header .header-text {
   font-family: Museo, serif;
   border: 4px groove rgb(0, 46, 93);
 }
+.section1 .section1-up #nouveaute h3 {
+  margin-top: 0;
+  padding: 60px 40px 40px 40px;
+}
 .section1 .section1-down {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -293,19 +297,30 @@ header .header-text {
   margin-bottom: 20px;
 }
 .section1 .section1-down .section-video-container1 .btn3 {
-  border: 4px solid rgb(0, 46, 93);
-  padding: 50px auto;
-  margin: 0 auto;
-  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 46, 93);
+  text-transform: uppercase;
+  font-size: 1em;
   cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  font-family: Futura, open;
-  font-weight: 400;
-  font-size: 20px;
-  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .section1 .section1-down .section-video-container1 .btn3:hover {
+  border: 3px solid rgb(0, 46, 93);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -313,7 +328,7 @@ header .header-text {
   border: 5px solid rgb(128, 128, 128);
 }
 .section1 .section1-down .section-video-container2 {
-  margin-bottom: 74px;
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,18 +357,33 @@ header .header-text {
           align-items: center;
   margin-bottom: 20px;
 }
-.section1 .section1-down .section-video-container2 .btn3 {
-  border: 4px solid rgb(0, 46, 93);
-  padding: 50px auto;
-  margin: 0 auto;
-  width: 120px;
+.section1 .section1-down .section-video-container2 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 46, 93);
+  text-transform: uppercase;
+  font-size: 1em;
   cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  font-family: Futura, open;
-  font-weight: 400;
-  font-size: 20px;
-  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.section1 .section1-down .section-video-container2 button:hover {
+  border: 3px solid rgb(0, 46, 93);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .section1 .section1-down .section-video-container2 iframe {
   border: 5px solid rgb(128, 128, 128);
@@ -688,6 +718,9 @@ footer {
 footer .container-footer {
   display: grid;
   grid-template-columns: 50% 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 footer .container-footer .footer-left {
   padding-right: 50px;
@@ -726,6 +759,7 @@ footer .container-footer .footer-left .logo-socialreseau i {
   margin: 0 10px;
   opacity: 0.5;
   cursor: pointer;
+  color: rgb(250, 250, 250);
 }
 footer .container-footer .footer-right {
   display: -webkit-box;
@@ -796,4 +830,51 @@ footer .container-footer .footer-right form input[type=submit]:hover {
   font-weight: 700;
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
+}
+footer .footer-bottom {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+footer .footer-bottom .logo-site img {
+  width: 40px;
+  margin-left: 20px;
+}
+footer .footer-bottom .footer-info {
+  margin-right: 20px;
+  color: rgb(250, 250, 250);
+}
+footer .footer-bottom .logo-socialreseau {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer-bottom .logo-socialreseau a {
+  color: rgb(250, 250, 250);
+  margin: 0 10px;
+}
+footer .footer-bottom .logo-socialreseau a i {
+  opacity: 0.5;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+footer .footer-bottom .logo-socialreseau a i:hover {
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */
