@@ -6,6 +6,11 @@ footer {
     grid-template-columns: 50% 50%;
     align-items: center;
 
+    @media screen and (max-width: 640px) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
     .footer-left {
       padding-right: 50px;
       line-height: 30px;

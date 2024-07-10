@@ -17,6 +17,7 @@ header {
       align-items: center;
       justify-content: space-around;
       padding: 0;
+
       li {
         margin: auto 0;
         background: $grey2;
@@ -33,6 +34,22 @@ header {
         margin: 8px 10px;
         align-items: center;
         height: 50%;
+
+        @media screen and (max-width: 800px) {
+          font-size: 15px;
+        }
+
+        @media screen and (max-width: 726px) {
+          font-size: 13px;
+          .hide-on-mobile {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 640px) {
+          .hide-on-mobile {
+            display: none;
+          }
+        }
 
         &:hover {
           transform: scale(1.3);

@@ -29,6 +29,11 @@
     margin: 0 auto;
     position: relative;
     height: 50vh;
+    @media screen and (max-width: 640px) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
     .btn-groupe {
       padding: 10px 20px;
     }

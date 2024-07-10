@@ -5,6 +5,11 @@
   display: grid;
   grid-template-columns: 50% 50%;
 
+  @media screen and (max-width: 640px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .sec3-btn {
     padding: 150px 20px 65px;
   }
