@@ -504,6 +504,7 @@ header .header-text {
   font-size: 16px;
   border: 4px solid rgb(35, 102, 205);
   width: 50%;
+  cursor: pointer;
   margin: 15px auto;
   border-radius: 60px/40px;
   padding: 20px 20px;
@@ -661,6 +662,7 @@ footer .container-footer .footer-left img {
 footer .container-footer .footer-left .logo-socialreseau i {
   margin: 0 10px;
   opacity: 0.5;
+  cursor: pointer;
 }
 footer .container-footer .footer-right {
   display: -webkit-box;
