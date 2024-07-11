@@ -131,65 +131,70 @@
   }
   .section2-container-projet {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     min-height: 50vh;
     border: 2px solid $black1;
     margin-bottom: 30px;
     margin: 40px 110px;
 
     @media screen and (max-width: 640px) {
-      .container-right {
-        display: none;
-      }
-      .container-left {
-        display: inline-block;
-        text-align: center;
-        font-size: 1.2rem;
-        width: 100%;
-        margin-left: 20px;
-      }
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
     }
 
     .container-left {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas: 1fr 1fr;
-      grid-template-areas:
-        "a b"
-        "c d";
-      gap: 20px;
-
-      #new {
-        font-family: $font2;
-        font-size: 1.5rem;
-      }
-
-      .label-1 {
-        grid-area: a;
-        padding: 25px 0;
-        margin: 0 auto;
-        display: flex;
-        display: inline-block;
-      }
-      .select-1 {
-        grid-area: b;
-        padding: 10px 10px;
-        margin: 0 auto;
-      }
-      .label-2 {
-        grid-area: c;
-        padding: 25px 25px;
-        margin: 0 auto;
-        margin: 0 auto;
-      }
-      .select-2 {
-        grid-area: d;
-        padding: 25px 25px;
-        margin: 0 auto;
-      }
+      display: inline-block;
+      text-align: center;
+      font-size: 1.2rem;
+      width: 100%;
+      margin-left: 20px;
     }
-    .container-right {
-      background: url(./img/reset.jpg) center/cover;
+  }
+
+  .container-left {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d";
+    gap: 20px;
+
+    #new {
+      font-family: $font2;
+      font-size: 1.5rem;
+    }
+
+    .label-1 {
+      grid-area: a;
+      padding: 25px 0;
+      margin: 0 auto;
+      display: flex;
+      display: inline-block;
+    }
+    .select-1 {
+      grid-area: b;
+      padding: 10px 10px;
+      margin: 0 auto;
+    }
+    .label-2 {
+      grid-area: c;
+      padding: 25px 25px;
+      margin: 0 auto;
+      margin: 0 auto;
+    }
+    .select-2 {
+      grid-area: d;
+      padding: 25px 25px;
+      margin: 0 auto;
+    }
+  }
+  .container-right {
+    background: url(./img/reset.jpg) center/cover;
+
+    @media screen and (max-width: 640px) {
+      display: none;
     }
   }
 }
