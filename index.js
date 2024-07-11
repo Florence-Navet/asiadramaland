@@ -25,3 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  const pseudoField = document.getElementById("pseudo");
+  const emailField = document.getElementById("email");
+  const randomSuffix = Math.floor(Math.random() * 1000);
+
+  pseudoField.name = `pseudo_${randomSuffix}`;
+  emailField.name = `email_${randomSuffix}`;
+});
