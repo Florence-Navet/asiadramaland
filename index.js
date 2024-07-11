@@ -1,32 +1,21 @@
-const nav = document.querySelector("nav");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 120) {
-    nav.style.top = "0";
-  } else {
-    nav.style.top = "-50px";
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-  const burgerMenu = document.getElementById("burger-menu");
-  const navElements = document.getElementById("nav-elements");
+  // Sélection de la barre de navigation
   const nav = document.querySelector("nav");
 
-  burgerMenu.addEventListener("click", function () {
-    navElements.classList.toggle("active");
-  });
-
+  // Gestion de l'événement de défilement de la fenêtre
   window.addEventListener("scroll", () => {
+    // Ajout d'un log pour vérifier le défilement dans la console
+    console.log(window.scrollY);
+
+    // Condition pour afficher ou masquer la barre de navigation en fonction du défilement
     if (window.scrollY > 120) {
       nav.style.top = "0";
     } else {
       nav.style.top = "-50px";
     }
   });
-});
 
-document.addEventListener("DOMContentLoaded", (event) => {
+  // Génération de noms aléatoires pour les champs pseudo et email
   const pseudoField = document.getElementById("pseudo");
   const emailField = document.getElementById("email");
   const randomSuffix = Math.floor(Math.random() * 1000);
