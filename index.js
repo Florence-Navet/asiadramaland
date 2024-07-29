@@ -10,6 +10,13 @@ window.addEventListener("scroll", () => {
   lastScroll = window.scrollY;
 });
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.style.height = "45px";
+  } else {
+    navbar.style.height = "90px";
+  }
+});
 // document.addEventListener("DOMContentLoaded", function () {
 //   // Sélection de la barre de navigation
 //   const nav = document.querySelector("nav");

@@ -20,8 +20,8 @@
   <body>
     <header>
       <nav id="navbar">
-        <div class="nav-elements">
-          <ul>
+        <div class="nav-elements" id="nav-elements">
+          <ul class="nav-links">
             <li><a href="#">Accueil</a></li>
             <li class="has-sous-nav">
               <a href="#">Projets<span>&#9660;</span></a>
@@ -180,7 +180,7 @@
       </div>
       <div class="section4-down">
         <div class="sec4dn-left">
-          <div class="video-container">
+          <div class="video-container" id="improvise">
             <video autoplay muted loop>
               <source src="./assets/img/papillon.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la balise vidéo.
@@ -249,6 +249,16 @@
           ></a>
         </div>
         <div class="footer-info">Crée par AeRia en 2024.</div>
+      </div>
+      <div class="pop-up" id="popup">
+        <div class="pop-up-container">
+          <h3>Don't miss out !<br />Suscribe to our newsletter</h3>
+          <div class="button-container">
+            <input type="email" placeholder="please enter you email" />
+            <button>Submit</button>
+          </div>
+          <i class="far fa-times-circle" id="closeBtn"></i>
+        </div>
       </div>
     </footer>
 

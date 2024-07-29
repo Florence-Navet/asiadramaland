@@ -57,6 +57,9 @@ a {
   box-sizing: border-box;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 li {
   list-style: none;
 }

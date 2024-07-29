@@ -5,81 +5,79 @@ header {
 
   nav {
     position: fixed;
-    top: -50px; // Ajuster cette valeur pour faire apparaître la nav
+    top: 0;
     transition: top 0.3s ease;
+    box-shadow: 0 0 3px #333;
     text-transform: uppercase;
     width: 100%;
     z-index: 1000;
+    height: 100px;
 
     .nav-elements {
-      background: $grey1;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $white1;
-      height: 50px;
       line-height: 22px;
       font-size: 18px;
-
-      .has-sous-nav:hover .sous-nav {
-        display: block;
-      }
 
       > ul {
         display: flex;
         list-style-type: none;
+      }
 
-        li {
-          position: relative;
-          margin: 0 10px; // Ajuster l'espace entre les éléments si nécessaire
+      li {
+        position: relative; /* Important pour positionner les sous-menus */
+        margin: 0 10px;
+        height: 45px;
+        border-radius: 20px;
 
-          a {
-            text-decoration: none;
-            color: $white1;
-            padding: 20px;
-            display: block;
-            padding: 20px;
-            transition: background-color 0.3s ease;
+        a {
+          background: $grey1;
+          color: $white1;
+          text-decoration: none;
+          display: block;
+          height: 100%;
+          width: 100%;
+          padding: 12px 20px; // Ajuster le padding pour centrer le texte
+          transition: background 0.3s ease, transform 0.3s ease;
+          border-radius: 20px;
 
-            &:hover {
-              background-color: $grey2;
-            }
+          &:hover {
+            background: black;
           }
+        }
 
-          .sous-nav {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            background: $grey1;
-            width: max-content;
-            z-index: 999;
-            transition: 0.5s ease;
+        .sous-nav {
+          display: none;
+          position: absolute;
+          top: 100%; /* Positionner en dessous du parent */
+          left: 0;
 
-            .sous-nav li a:hover {
-              background: $grey2;
-            }
+          border-radius: 20px;
+          z-index: 1000;
+          transition: 0.5s ease;
+          text-align: left;
 
-            li {
-              padding: 10px;
-              white-space: nowrap; // Empêche le texte de se couper
-
-              a {
-                color: $white1;
-                text-decoration: none;
-                transition: 0.5s;
-              }
+          li {
+            white-space: nowrap;
+            a {
+              color: $white1;
+              text-decoration: none;
+              padding: 10px auto; /* Ajuster le padding si nécessaire */
+              display: block;
+              transition: background 0.5s ease;
 
               &:hover {
-                background: $black1;
-                transform: scale(0.8);
+                background: black;
+                border-radius: 20px;
+                padding: 10px auto;
               }
             }
           }
+        }
 
-          &:hover .sous-nav {
-            display: block;
-          }
+        &:hover .sous-nav {
+          display: block;
         }
       }
     }
