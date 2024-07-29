@@ -5,7 +5,7 @@ header {
 
   nav {
     position: fixed;
-    top: 0; // Ajuster cette valeur pour faire apparaître la nav
+    top: -50px; // Ajuster cette valeur pour faire apparaître la nav
     transition: top 0.3s ease;
     text-transform: uppercase;
     width: 100%;
