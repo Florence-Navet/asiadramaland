@@ -1017,8 +1017,8 @@ footer .pop-up {
   height: 250px;
   width: 520px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(#30587a), to(rgb(36, 113, 180)));
-  background: linear-gradient(90deg, #30587a, rgb(36, 113, 180));
+  background: -webkit-gradient(linear, left top, right top, from(blue), to(pink));
+  background: linear-gradient(to right, blue, pink);
   border-radius: 76% 24% 90% 10%/20% 85% 15% 80%;
   -webkit-box-shadow: 0 5px 10px black;
           box-shadow: 0 5px 10px black;
@@ -1037,18 +1037,20 @@ footer .pop-up-container {
           transform: translate(-50%, -45%);
 }
 footer .pop-up-container h3 {
-  color: white;
+  color: rgb(250, 250, 250);
   margin: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-family: Corben, "montserrat";
 }
 footer .button-container input {
-  border: 1px solid #333;
+  border: 1px solid rgb(0, 46, 93);
   padding: 1rem 2rem;
   border-radius: 15px;
-  -webkit-box-shadow: 1px 2px 0 black;
-          box-shadow: 1px 2px 0 black;
+  -webkit-box-shadow: 1px 2px 0 rgb(0, 0, 0);
+          box-shadow: 1px 2px 0 rgb(0, 0, 0);
   outline: none;
   font-size: 1.2rem;
+  font-family: Futura, open;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1059,37 +1061,38 @@ footer .button-container button {
   border-radius: 15px;
   padding: 1rem 2rem;
   font-size: 1.2rem;
-  border: 1px solid #333;
+  font-family: Museo, serif;
+  border: 1px solid rgb(0, 46, 93);
   outline: none;
   cursor: pointer;
   background: white;
-  -webkit-box-shadow: 1px 2px 0 black;
-          box-shadow: 1px 2px 0 black;
+  -webkit-box-shadow: 1px 2px 0 rgb(0, 0, 0);
+          box-shadow: 1px 2px 0 rgb(0, 0, 0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 footer .button-container button:hover {
-  background: rgb(211, 242, 251);
+  background: rgb(118, 178, 238);
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
 }
 footer .button-container button:active {
-  -webkit-transform: scale(0.96);
-          transform: scale(0.96);
+  -webkit-transform: scale(0.86);
+          transform: scale(0.86);
 }
 footer .fa-times-circle {
   position: absolute;
   left: 2rem;
   top: 0.7rem;
   font-size: 1.7rem;
-  color: white;
-  text-shadow: 2px 2px 0px #333;
+  color: rgb(250, 250, 250);
+  text-shadow: 2px 2px 0px rgb(0, 0, 0);
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 footer .fa-times-circle:hover {
-  color: rgb(211, 242, 251);
+  color: rgb(118, 178, 238);
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
 }

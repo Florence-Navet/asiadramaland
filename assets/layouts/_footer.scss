@@ -148,7 +148,7 @@ footer {
     height: 250px;
     width: 520px;
     text-align: center;
-    background: linear-gradient(90deg, #30587a, rgb(36, 113, 180));
+    background: linear-gradient(to right, blue, pink);
     border-radius: 76% 24% 90% 10% / 20% 85% 15% 80%;
     box-shadow: 0 5px 10px black;
     opacity: 0;
@@ -163,17 +163,19 @@ footer {
     transform: translate(-50%, -45%);
   }
   .pop-up-container h3 {
-    color: white;
+    color: $white1;
     margin: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-family: $font1;
   }
   .button-container input {
-    border: 1px solid #333;
+    border: 1px solid $bleu1;
     padding: 1rem 2rem;
     border-radius: 15px;
-    box-shadow: 1px 2px 0 black;
+    box-shadow: 1px 2px 0 $black1;
     outline: none;
     font-size: 1.2rem;
+    font-family: $font2;
     transition: 0.5s;
   }
   .button-container input:focus {
@@ -184,32 +186,33 @@ footer {
     border-radius: 15px;
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    border: 1px solid #333;
+    font-family: $font3;
+    border: 1px solid $bleu1;
     outline: none;
     cursor: pointer;
     background: white;
-    box-shadow: 1px 2px 0 black;
+    box-shadow: 1px 2px 0 $black1;
     transition: 0.3s;
   }
   .button-container button:hover {
-    background: rgb(211, 242, 251);
+    background: $bleu4;
     transform: translateX(-1px);
   }
   .button-container button:active {
-    transform: scale(0.96);
+    transform: scale(0.86);
   }
   .fa-times-circle {
     position: absolute;
     left: 2rem;
     top: 0.7rem;
     font-size: 1.7rem;
-    color: white;
-    text-shadow: 2px 2px 0px #333;
+    color: $white1;
+    text-shadow: 2px 2px 0px $black1;
     cursor: pointer;
     transition: 0.3s;
   }
   .fa-times-circle:hover {
-    color: rgb(211, 242, 251);
+    color: $bleu4;
     transform: translateX(-1px);
   }
   .fa-times-circle:active {
