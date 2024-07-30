@@ -64,7 +64,7 @@ header nav {
   text-transform: uppercase;
   width: 100%;
   z-index: 1000;
-  height: 100px;
+  height: 120px;
 }
 header nav .nav-elements {
   display: -webkit-box;
@@ -76,7 +76,7 @@ header nav .nav-elements {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 22px;
+  line-height: 15px;
   font-size: 18px;
 }
 header nav .nav-elements > ul {
@@ -783,17 +783,23 @@ header nav .nav-elements li:hover .sous-nav {
           flex: 1 1 45%;
   padding: 20px;
 }
+.section4 .section4-down .video-container {
+  position: relative;
+  overflow: hidden;
+}
 .section4 .section4-down .video-container video {
   width: 50%;
-  max-width: 100%;
+  max-width: 80%;
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opactity: 0;
-  -webkit-transform: translateX(-200px);
-          transform: translateX(-200px);
-  -webkit-transition: 1s ease-in;
-  transition: 1s ease-in;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 .section4 .section4-down h4,
 .section4 .section4-down h2 {
@@ -815,10 +821,8 @@ header nav .nav-elements li:hover .sous-nav {
   color: rgb(35, 102, 205);
   background: pink;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
   border-radius: 60px/40px;
-  padding: 20px 20px;
+  cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   text-transform: uppercase;

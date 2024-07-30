@@ -11,13 +11,13 @@ header {
     text-transform: uppercase;
     width: 100%;
     z-index: 1000;
-    height: 100px;
+    height: 120px;
 
     .nav-elements {
       display: flex;
       justify-content: center;
       align-items: center;
-      line-height: 22px;
+      line-height: 15px;
       font-size: 18px;
 
       > ul {

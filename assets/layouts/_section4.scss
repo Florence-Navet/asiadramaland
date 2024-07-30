@@ -34,14 +34,17 @@
     }
 
     .video-container {
+      position: relative;
+      overflow: hidden;
+
       video {
         width: 50%;
-        max-width: 100%;
+        max-width: 80%;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        opactity: 0;
-        transform: translateX(-200px);
-        transition: 1s ease-in;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: opacity 1s ease, transform 1s ease;
       }
     }
 
@@ -69,10 +72,8 @@
         color: $bleu3;
         background: pink;
         border: none;
-        border-radius: 5px;
+        border-radius: 60px / 40px;
         cursor: pointer;
-        border-radius: 60px /40px;
-        padding: 20px 20px;
         transition: background-color 0.3s ease;
         text-transform: uppercase;
 

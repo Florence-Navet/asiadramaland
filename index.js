@@ -1,4 +1,5 @@
 let lastScroll = 0;
+let playOnce = true;
 
 window.addEventListener("scroll", () => {
   if (window.scrollY < lastScroll) {
@@ -14,8 +15,29 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     navbar.style.height = "45px";
   } else {
-    navbar.style.height = "90px";
+    navbar.style.height = "120px";
   }
+  let scrollValue =
+    (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+  // console.log(scrollValue);
+  // if (scrollValue > 45) {
+  //   imgImprovise.style.opacity = 1;
+  //   imgImprovise.style.transform = "none";
+  // }
+
+  //popup
+
+  if (scrollValue > 0.85 && playOnce) {
+    popup.style.opacity = 1;
+    popup.style.transform = "none";
+    playOnce = false;
+    // playOnce = false;
+  }
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.style.opacity = 0;
+  popup.style.transform = "translateX(500px)";
 });
 // document.addEventListener("DOMContentLoaded", function () {
 //   // Sélection de la barre de navigation
@@ -41,3 +63,27 @@ const randomSuffix = Math.floor(Math.random() * 1000);
 
 pseudoField.name = `pseudo_${randomSuffix}`;
 emailField.name = `email_${randomSuffix}`;
+
+//image
+document.addEventListener("DOMContentLoaded", () => {
+  const videoContainer = document.querySelector("#VideoImprovise");
+  const video = videoContainer.querySelector("video");
+
+  const handleScroll = () => {
+    const videoRect = videoContainer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (videoRect.top < windowHeight && videoRect.bottom >= 0) {
+      // La vidéo est dans la fenêtre de visualisation
+      video.style.opacity = 1;
+      video.style.transform = "translateX(0)";
+    } else {
+      // La vidéo est hors de la fenêtre de visualisation
+      video.style.opacity = 0;
+      video.style.transform = "translateX(-100%)";
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Vérifie au chargement de la page
+});
